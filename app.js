@@ -58,6 +58,3 @@ function divNumbers(req, res) {
     res.sendStatus(400)
   }
 }
-module.exports = {
-  app : app
-}
