@@ -1,0 +1,21 @@
+{
+  "name": "01-calculator",
+  "version": "0.0.1",
+  "description": "A calculator app",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node app.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "galvanize"
+  ],
+  "author": "YOUR NAME AND YOUR PAIR'S NAME HERE",
+  "dependencies": {
+    "mocha": "^3.1.2"
+  },
+  "license": "ISC"
+}
