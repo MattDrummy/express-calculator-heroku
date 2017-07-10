@@ -5,11 +5,13 @@ var app = express();
 // Now make your server!
 var port = 5500;
 var numbers = '/:num1/:num2'
+app.get('/', main);
 app.get(`/add${numbers}`, addNumbers);
 app.get(`/sub${numbers}`, subNumbers);
 app.get(`/mult${numbers}`, multNumbers);
 app.get(`/div${numbers}`, divNumbers);
-app.listen(5500);
+app.get('*', error)
+app.listen(process.env.PORT || port);
 
 function getNumbers(req, funct) {
   return funct(parseFloat(req.params.num1), parseFloat(req.params.num2));
@@ -57,4 +59,11 @@ function divNumbers(req, res) {
   } else {
     res.sendStatus(400)
   }
+}
+
+function main(req, res) {
+  res.send("<h1>Welcome to Math!</h1>");
+}
+function error(req, res) {
+  res.send("404 error: Not Found");
 }
